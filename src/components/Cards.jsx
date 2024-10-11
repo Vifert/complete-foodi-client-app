@@ -27,7 +27,7 @@ const Cards = ({ item }) => {
         const cartItem = {menuItemId: _id, name, quantity : 1, image, price, email: user.email}
 
         // axios.post('http://localhost:5000/carts', cartItem)
-        axios.post('http://localhost:6001/carts', cartItem)
+        axios.post('https://complete-foodi-client-server-l9jv.onrender.com/carts', cartItem)
         .then((response) => {
           console.log(response);
           if(response){
