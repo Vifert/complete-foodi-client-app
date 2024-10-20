@@ -16,12 +16,12 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36ee7c",
-        "name": "Escalope de Veau",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://i.ibb.co/HCrDdk6/img1.png",
+        "_id": "67149b8999de54bd26cc5627",
+        "name": "Portuguese Custard Tarts",
+        "recipe": "Puff pastry, eggs, sugar, milk, vanilla, lemon zest",
+        "image": "https://i.ibb.co/5B9RGFr/Portuguese-Custard-Tarts.jpg",
         "category": "popular",
-        "price": 14.5
+        "price": 120
     },
     {
         "_id": "642c155b2c4774f05c36ee88",
@@ -32,36 +32,36 @@
         "price": 12.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee7a",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://i.ibb.co/qJCmcpC/img2.png",
+        "_id": "67149b1f99de54bd26cc5620",
+        "name": "Chicken Karaage",
+        "recipe": "Chicken, soy sauce, garlic, ginger, cornstarch, flour, sake",
+        "image": "https://i.ibb.co/S62Sn2v/Chicken-Karaage.jpg",
         "category": "popular",
-        "price": 14.5
+        "price": 300
     },
     {
-        "_id": "642c155b2c4774f05c36ee74",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://i.ibb.co/W5T6Gmj/img3.png",
+        "_id": "671497fa99de54bd26cc55e2",
+        "name": "Lamb Tagine",
+        "recipe": "Lamb, onions, apricots, almonds, cinnamon, olive oil",
+        "image": "https://i.ibb.co/Pcdb0S7/Lamb-Tagine.jpg",
         "category": "popular",
-        "price": 14.5
+        "price": 450
     },
     {
-        "_id": "642c155b2c4774f05c36ee712",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://i.ibb.co/HCrDdk6/img1.png",
+        "_id": "6714973a99de54bd26cc55c9",
+        "name": "Potato Salad (Olivier Salad)",
+        "recipe": "Potatoes, carrots, peas, eggs, mayonnaise, dill, sausages",
+        "image": "https://i.ibb.co/M8mMbkm/Potato-Salad.jpg",
         "category": "popular",
-        "price": 14.5
+        "price": 180
     },
     {
-        "_id": "642c155b2c4774f05c36ee7x",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://i.ibb.co/qJCmcpC/img2.png",
+        "_id": "6714947099de54bd26cc5574",
+        "name": "Cabbage Rolls (Gołąbki)",
+        "recipe": "Cabbage, rice, minced meat, tomato sauce, onions, garlic",
+        "image": "https://i.ibb.co/NWJYbRT/Cabbage-Rolls.jpg",
         "category": "popular",
-        "price": 14.5
+        "price": 180
     },
     {
         "_id": "642c155b2c4774f05c36ee8c",
@@ -176,12 +176,12 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee7f",
-        "name": "Roasted Pork Belly",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://i.ibb.co/qJCmcpC/img2.png",
+        "_id": "6714942699de54bd26cc556d",
+        "name": "Fish Soup (Ukha)",
+        "recipe": "Fish fillets, carrots, potatoes, onions, dill, black pepper",
+        "image": "https://i.ibb.co/HNyp37s/Fish-Soup-Ukha.jpg",
         "category": "popular",
-        "price": 14.5
+        "price": 220
     },
     {
         "_id": "642c155b2c4774f05c36eea8",
@@ -288,12 +288,36 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36ee7e",
-        "name": "Fish Parmentier",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://i.ibb.co/HCrDdk6/img1.png",
+        "_id": "671378d990ee7b4c6cbba56f",
+        "name": "Timbits (Doughnut Holes)",
+        "recipe": "Flour, sugar, baking powder, eggs, milk, butter, nutmeg",
+        "image": "https://i.ibb.co/12x7N88/Timbits.jpg",
         "category": "popular",
-        "price": 14.5
+        "price": 100
+    },
+    {
+        "_id": "6713789690ee7b4c6cbba568",
+        "name": "Blini Pancakes",
+        "recipe": "Buckwheat flour, milk, butter, yeast, eggs, sugar, salt",
+        "image": "https://i.ibb.co/ZSSXqQj/Blini-Pancakes.jpg",
+        "category": "popular",
+        "price": 150
+    },
+    {
+        "_id": "6713645b8e3b351a2ac4c29a",
+        "name": "Spring Onion and Prawn Empanadas",
+        "recipe": "Prawns, spring onions, feta, flour, garlic, butter, red chili, vinegar, egg",
+        "image": "https://i.ibb.co/9n1C3xX/Spring-Onion-and-Prawn-Empanadas.jpg",
+        "category": "popular",
+        "price": 300
+    },
+    {
+        "_id": "671362d18e3b351a2ac4c277",
+        "name": "Mee Goreng Mamak",
+        "recipe": "Peanuts, prawns, tofu, cabbage, soy sauce, noodles, potatoes, tamarind paste, egg",
+        "image": "https://i.ibb.co/CP1ZvR5/Mee-Goreng-Mamak.jpg",
+        "category": "popular",
+        "price": 280
     },
     {
         "_id": "642c155b2c4774f05c36ee8b",

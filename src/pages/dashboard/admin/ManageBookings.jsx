@@ -92,7 +92,7 @@ const ManageBookings = () => {
                    {item.email}
                   </td>
                   <td>{item.transitionId}</td>
-                  <td>${item.price}</td>
+                  <td>₹{item.price}</td>
                   <td>
                     {item.status}
                   </td>

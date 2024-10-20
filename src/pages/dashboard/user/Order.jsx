@@ -67,7 +67,7 @@ const Order = () => {
                         <td>{index + 1}</td>
                         <td>{formatDate(item.createdAt)}</td>
                         <td className="font-medium">{item.transitionId}</td>
-                        <td>${item.price}</td>
+                        <td>₹{item.price}</td>
                         <td>{item.status}</td>
                         <td>
                           <button className="btn btn-sm border-none text-orange-400 bg-transparent">

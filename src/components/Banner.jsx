@@ -50,7 +50,7 @@ const Banner = () => {
                   />
                 
                 </div>
-                <p className="text-red">$18.00</p>
+                <p className="text-red">₹149.0</p>
               </div>
             </div>
             <div className="bg-white px-3 py-2 rounded-2xl md:flex items-center gap-3 shadow-sm w-64 hidden">
@@ -91,7 +91,7 @@ const Banner = () => {
                   />
                 
                 </div>
-                <p className="text-red">$18.00</p>
+                <p className="text-red">₹149.0</p>
               </div>
             </div>
           </div>
