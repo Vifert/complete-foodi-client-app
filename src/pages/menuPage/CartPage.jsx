@@ -193,7 +193,7 @@ const cartSubtotal = Array.isArray(cart) ? cart.reduce((total, item) => {
                         +
                       </button>
                     </td>
-                    <td>${calculateTotalPrice(item).toFixed(2)}</td>
+                    <td>₹{calculateTotalPrice(item).toFixed(2)}</td>
                     <td>
                       <button
                         className="btn btn-sm border-none text-red bg-transparent"
@@ -224,7 +224,7 @@ const cartSubtotal = Array.isArray(cart) ? cart.reduce((total, item) => {
             <p>Total Items: {cart.length}</p>
             <p>
               Total Price:{" "}
-              <span id="total-price">${orderTotal.toFixed(2)}</span>
+              <span id="total-price">₹{orderTotal.toFixed(2)}</span>
             </p>
             <Link to="/process-checkout" className="btn btn-md bg-green text-white px-8 py-1">
               Procceed to Checkout
