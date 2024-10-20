@@ -113,8 +113,8 @@ const Menu = () => {
 
   const AllergyModal = () => (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
-      <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
-        <h2 className="text-xl font-bold mb-4">Select Your Allergies</h2>
+      <div className={`bg-white p-6 rounded-lg shadow-xl max-w-md w-full ${isDarkMode ? 'dark:bg-gray-800' : ''}`}>
+        <h2 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Select Your Allergies</h2>
         <div className="space-y-2">
           {allergyList.map((allergy) => (
             <label key={allergy.name} className="flex items-center space-x-2">
@@ -124,7 +124,7 @@ const Menu = () => {
                 onChange={() => handleAllergyChange(allergy.name)}
                 className="form-checkbox h-5 w-5 text-green-600"
               />
-              <span>{allergy.name}</span>
+              <span className={`${isDarkMode ? 'text-white' : 'text-black'}`}>{allergy.name}</span>
             </label>
           ))}
         </div>
@@ -140,7 +140,7 @@ const Menu = () => {
 
   return (
     <div>
-      {/* menu banner */}
+       {/* menu banner */}
       <div className={`max-w-screen-2xl container mx-auto xl:px-24 px-4 bg-gradient-to-r from-0% from-[#FAFAFA] to-[#FCFCFC] to-100% ${isDarkMode ? "dark" : ""}`}>
         <div className="py-48 flex flex-col items-center justify-center">
           <div className=" text-center px-4 space-y-7">
@@ -160,12 +160,12 @@ const Menu = () => {
       </div>
 
       {/* menu shop  */}
-      <div className="section-container">
+      <div className="section-container mt-8"> {/* Added mt-8 for top margin */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           {/* Allergy filter button */}
           <button
             onClick={() => setShowAllergyModal(true)}
-            className="mb-4 md:mb-0 bg-yellow-400 text-black px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-yellow-500 transition duration-300"
+            className="mb-4 md:mb-0 bg-green text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-green-600 transition duration-300"
           >
             <FaExclamationTriangle />
             <span>Allergy Filter</span>
