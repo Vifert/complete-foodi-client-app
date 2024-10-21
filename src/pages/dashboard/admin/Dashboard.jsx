@@ -3,26 +3,24 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../hooks/useAuth";
 import { FaBook, FaRupeeSign, FaUsers } from "react-icons/fa";
-import {
-  BarChart,
-  Bar,
-  Cell,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  PieChart,
-  Pie,
-  Legend,
-  ResponsiveContainer,
-  ComposedChart,
-  Tooltip,
-  Area,
-  Line,
-  AreaChart,
-} from "recharts";
+// import {
+//   BarChart,
+//   Bar,
+//   Cell,
+//   XAxis,
+//   YAxis,
+//   CartesianGrid,
+//   PieChart,
+//   Pie,
+//   Legend,
+//   ResponsiveContainer,
+//   Tooltip,
+//   AreaChart,
+//   Area,
+// } from "recharts";
 
-const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+// const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
+// const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -36,63 +34,61 @@ const Dashboard = () => {
     },
   });
 
-  console.log(stats);
-  const { data: chartData = [] } = useQuery({
-    queryKey: ["order-stats"],
-    queryFn: async () => {
-      const res = await axiosSecure.get("/order-stats");
-      return res.data;
-    },
-  });
+  // const { data: chartData = [] } = useQuery({
+  //   queryKey: ["order-stats"],
+  //   queryFn: async () => {
+  //     const res = await axiosSecure.get("/order-stats");
+  //     return res.data;
+  //   },
+  // });
 
-  // custom shape for the bar chart
-  const getPath = (x, y, width, height) => {
-    return `M${x},${y + height}C${x + width / 3},${y + height} ${
-      x + width / 2
-    },${y + height / 3}
-    ${x + width / 2}, ${y}
-    C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${
-      x + width
-    }, ${y + height}
-    Z`;
-  };
+  // // custom shape for the bar chart
+  // const getPath = (x, y, width, height) => {
+  //   return `M${x},${y + height}C${x + width / 3},${y + height} ${
+  //     x + width / 2
+  //   },${y + height / 3}
+  //   ${x + width / 2}, ${y}
+  //   C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${
+  //     x + width
+  //   }, ${y + height}
+  //   Z`;
+  // };
 
-  const TriangleBar = (props) => {
-    const { fill, x, y, width, height } = props;
+  // const TriangleBar = (props) => {
+  //   const { fill, x, y, width, height } = props;
+  //   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
+  // };
 
-    return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
-  };
+  // // custom shape for the pie chart
+  // const RADIAN = Math.PI / 180;
+  // const renderCustomizedLabel = ({
+  //   cx,
+  //   cy,
+  //   midAngle,
+  //   innerRadius,
+  //   outerRadius,
+  //   percent,
+  // }) => {
+  //   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  //   const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  //   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
-  // custom shape for the pie chart
-  const RADIAN = Math.PI / 180;
-  const renderCustomizedLabel = ({
-    cx,
-    cy,
-    midAngle,
-    innerRadius,
-    outerRadius,
-    percent,
-  }) => {
-    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+  //   return (
+  //     <text
+  //       x={x}
+  //       y={y}
+  //       fill="white"
+  //       textAnchor={x > cx ? "start" : "end"}
+  //       dominantBaseline="central"
+  //     >
+  //       {`${(percent * 100).toFixed(0)}%`}
+  //     </text>
+  //   );
+  // };
 
-    return (
-      <text
-        x={x}
-        y={y}
-        fill="white"
-        textAnchor={x > cx ? "start" : "end"}
-        dominantBaseline="central"
-      >
-        {`${(percent * 100).toFixed(0)}%`}
-      </text>
-    );
-  };
-
-  const pieChartData = chartData.map((data) => {
-    return { name: data.category, value: data.revenue };
-  });
+  // const pieChartData = chartData.map((data) => {
+  //   return { name: data.category, value: data.revenue };
+  // });
 
   return (
     <div className="w-full md:w-[870px] mx-auto px-4 ">
@@ -103,7 +99,7 @@ const Dashboard = () => {
       <div className="stats shadow flex flex-col md:flex-row">
         <div className="stat bg-emerald-200">
           <div className="stat-figure text-secondary">
-          <FaRupeeSign className="text-3xl"></FaRupeeSign>
+            <FaRupeeSign className="text-3xl"></FaRupeeSign>
           </div>
           <div className="stat-title">Revenue</div>
           <div className="stat-value">₹{stats.revenue}</div>
@@ -151,9 +147,9 @@ const Dashboard = () => {
       </div>
 
       {/* bar & pie chart */}
-      <div className="mt-16 flex flex-col sm:flex-row">
+      {/* <div className="mt-16 flex flex-col sm:flex-row"> */}
         {/* bar chart */}
-        <div className="sm:w-1/2 w-full">
+        {/* <div className="sm:w-1/2 w-full">
           <div style={{ width: "100%", height: 300 }}>
             <ResponsiveContainer>
               <AreaChart
@@ -178,33 +174,33 @@ const Dashboard = () => {
               </AreaChart>
             </ResponsiveContainer>
           </div>
-        </div>
+        </div> */}
 
         {/* pie chart */}
-        <div className="sm:w-1/2 w-full">
-        <div style={{ width: '100%', height: 300 }}>
-        <ResponsiveContainer width="100%" height="100%">
-        <PieChart width={400} height={400}>
-          <Pie
-            data={pieChartData}
-            cx="50%"
-            cy="50%"
-            labelLine={false}
-            label={renderCustomizedLabel}
-            outerRadius={80}
-            fill="#8884d8"
-            dataKey="value"
-          >
-            {pieChartData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
-          </Pie>
-          <Legend/>
-        </PieChart>
-      </ResponsiveContainer>
-      </div>
-        </div>
-      </div>
+        {/* <div className="sm:w-1/2 w-full">
+          <div style={{ width: '100%', height: 300 }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart width={400} height={400}>
+                <Pie
+                  data={pieChartData}
+                  cx="50%"
+                  cy="50%"
+                  labelLine={false}
+                  label={renderCustomizedLabel}
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                >
+                  {pieChartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Legend/>
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 };
